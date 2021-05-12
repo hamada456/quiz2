@@ -10,6 +10,8 @@ const answers = [
 	"D"
 ];
 
+const correct = "A";
+
 document.getElementById("btn0").innerText = answers[0];
 document.getElementById("btn1").innerText = answers[1];
 document.getElementById("btn2").innerText = answers[2];
