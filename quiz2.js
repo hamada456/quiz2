@@ -1,5 +1,14 @@
-document.getElementById("js-question").innerText = "問題文";
 
+const question = 'Aは？';
+
+document.getElementById("js-question").innerText = question;
+
+const answers = [
+	"A",
+	"B",
+	"C",
+	"D"
+];
 
 document.getElementById("btn1").innerText = "1";
 document.getElementById("btn2").innerText = "2";
