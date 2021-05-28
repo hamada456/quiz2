@@ -8,21 +8,18 @@ const quiz = [
 
 document.getElementById("js-question").innerText = quiz[0].question;
 
-let s = 0;
-const a = "btn" + s;
-
-let btnlen = $button.length;
+//子要素ボタンの数を取得
+let btnlen = document.getElementById("htmlanswers").childElementCount;
 
 let index = 0;
-while(index < btnlen){
-document.getElementById(a).innerText = quiz[0].answers[0];
+let b = 0;
+let s = 0;
+
+while(index < btnlen){;
+let a = "btn" + s;
+document.getElementById(a).innerText = quiz[0].answers[b];
 index++;
 s++;
-}
+b++;
+};
 
-
-document.getElementById("btn1").innerText = quiz[0].answers[1];
-document.getElementById("btn2").innerText = quiz[0].answers[2];
-document.getElementById("btn3").innerText = quiz[0].answers[3];
-
-console.log()

@@ -14,6 +14,8 @@ const quiz = [
   }
 ];
 
+//console.log(quiz[0].question);
+
 const $window = window;
 const $doc = document;
 const $question = $doc.getElementById('js-question');
