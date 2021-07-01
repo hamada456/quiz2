@@ -1,25 +1,67 @@
+//名前表示
+document.getElementById("userName").innerText = "挑戦者： " +userName + "  様";
+
 //問題
 const quiz = [
-	{ question:"Aはどれ？",
-	  answers:["A","B","C","D"],
-	  correctAnswer:"A"
-	}
-];
+  {
+  	question :"Aはどれ？",
+  	correct :"A",
+  	answers :["A","B","C","D"]
+  },
+  {
+    question :"Bはどれ？？？？？",
+    correct :"B",
+    answers :["A","B","C","D"]
+  },
+  {
+    question :"Cはどれ？？？？？？？？？？",
+    correct :"C",
+    answers :["A","B","C","D"]
+  }];
 
+//問題文の代入
 document.getElementById("js-question").innerText = quiz[0].question;
 
-//子要素ボタンの数を取得
-let btnlen = document.getElementById("htmlanswers").childElementCount;
+//回答一覧の代入
+let btnNum = nextAnswers = 0;
+let btn = "btn" + btnNum;
+//let $button = document.getElementById(btn).innerText;
 
-let index = 0;
-let b = 0;
-let s = 0;
+document.getElementById(btn).innerText = quiz[0].answers[0];
+document.getElementById("btn1").innerText = quiz[0].answers[1];
+document.getElementById("btn2").innerText = quiz[0].answers[2];
+document.getElementById("btn3").innerText = quiz[0].answers[3];
 
-while(index < btnlen){;
-let a = "btn" + s;
-document.getElementById(a).innerText = quiz[0].answers[b];
-index++;
-s++;
-b++;
-};
+//クリックイベントと正誤判定のif文
 
+document.getElementById("btn0").addEventListener("click",() => {
+if (quiz[0].correct === document.getElementById("btn0").innerText){
+  window.alert("正解");
+}else{
+  window.alert("不正解");
+  }
+});
+
+document.getElementById("btn1").addEventListener("click",() => {
+if (quiz[0].correct === document.getElementById("btn1").innerText){
+  window.alert("正解");
+}else{
+  window.alert("不正解");
+  }
+});
+
+document.getElementById("btn2").addEventListener("click",() => {
+if (quiz[0].correct === document.getElementById("btn2").innerText){
+  window.alert("正解");
+}else{
+  window.alert("不正解");
+  }
+});
+
+document.getElementById("btn3").addEventListener("click",() => {
+if (quiz[0].correct === document.getElementById("btn3").innerText){
+  window.alert("正解");
+}else{
+  window.alert("不正解");
+  }
+});
