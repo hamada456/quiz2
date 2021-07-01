@@ -6,7 +6,8 @@ if(userName === null || userName === ""){//キャンセルはnullを返す
   throw new Error("デバッグA");//処理を終了
 };
 
-let okNg = window.confirm( "「" + userName + "」\nこの名前でいいですか？");//option + ¥でバックスラッシュ
+let okNg = window.confirm( "「" + userName + "」\nこの名前でいいですか？");
+//option + ¥でバックスラッシュ
 
 if(okNg){
   window.alert("問題スタート！！");
