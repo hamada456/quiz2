@@ -12,7 +12,7 @@ let okNg = window.confirm( "「" + userName + "」\nこの名前でいいです�
 if(okNg){
   window.alert("問題スタート！！");
 }else{
-  window.alert("考え直す時間はありません");
-  location.href = "https://www.google.com/";
+  window.alert("名前を考え直す時間はありません、失格です");
+  location.href = "http://www.core-sys.co.jp/index.html";
   throw new Error("デバッグB");
 };
