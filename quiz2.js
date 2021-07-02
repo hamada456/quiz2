@@ -24,11 +24,13 @@ document.getElementById("js-question").innerText = quiz[0].question;
 
 //回答一覧の代入
 const $button = document.getElementsByTagName("button");
-$button[0].innerText = quiz[0].answers[0];
-$button[1].innerText = quiz[0].answers[1];
-$button[2].innerText = quiz[0].answers[2];
-$button[3].innerText = quiz[0].answers[3];
 
+let buttonIndex = 0;
+let buttonLength = $button.length;
+while(buttonIndex < buttonLength){
+	$button[buttonIndex].innerText = quiz[0].answers[buttonIndex];
+	buttonIndex++;
+}
 
 //クリックイベントと正誤判定のif文
 $button[0].addEventListener("click",() => {
