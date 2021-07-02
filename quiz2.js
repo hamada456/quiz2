@@ -23,43 +23,40 @@ const quiz = [
 document.getElementById("js-question").innerText = quiz[0].question;
 
 //回答一覧の代入
-let btnNum = nextAnswers = 0;
-let btn = "btn" + btnNum;
-//let $button = document.getElementById(btn).innerText;
+const $button = document.getElementsByTagName("button");
+$button[0].innerText = quiz[0].answers[0];
+$button[1].innerText = quiz[0].answers[1];
+$button[2].innerText = quiz[0].answers[2];
+$button[3].innerText = quiz[0].answers[3];
 
-document.getElementById(btn).innerText = quiz[0].answers[0];
-document.getElementById("btn1").innerText = quiz[0].answers[1];
-document.getElementById("btn2").innerText = quiz[0].answers[2];
-document.getElementById("btn3").innerText = quiz[0].answers[3];
 
 //クリックイベントと正誤判定のif文
-
-document.getElementById("btn0").addEventListener("click",() => {
-if (quiz[0].correct === document.getElementById("btn0").innerText){
+$button[0].addEventListener("click",() => {
+if (quiz[0].correct === $button[0].innerText){
   window.alert("正解");
 }else{
   window.alert("不正解");
   }
 });
 
-document.getElementById("btn1").addEventListener("click",() => {
-if (quiz[0].correct === document.getElementById("btn1").innerText){
+$button[1].addEventListener("click",() => {
+if (quiz[0].correct === $button[1].innerText){
   window.alert("正解");
 }else{
   window.alert("不正解");
   }
 });
 
-document.getElementById("btn2").addEventListener("click",() => {
-if (quiz[0].correct === document.getElementById("btn2").innerText){
+$button[2].addEventListener("click",() => {
+if (quiz[0].correct === $button[2].innerText){
   window.alert("正解");
 }else{
   window.alert("不正解");
   }
 });
 
-document.getElementById("btn3").addEventListener("click",() => {
-if (quiz[0].correct === document.getElementById("btn3").innerText){
+$button[3].addEventListener("click",() => {
+if (quiz[0].correct === $button[3].innerText){
   window.alert("正解");
 }else{
   window.alert("不正解");
